@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+  <meta name="description" content="How to add more than 3 animated words in ConferenceM4">
+  
+  
+  <title>How to add more than 3 animated words in ConferenceM4</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Be+Vietnam:100,100i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam:100,100i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+  
+
+</head>
+<body>
+  
+  <section class="header1 conferencem4_header1 cid-sAenO6gg8X" id="header1-0">
+
+  
+
+  <div class="mbr-overlay" style="opacity: 0.9; background-color: rgb(255, 255, 255);">
+  </div>
+
+
+  <div class="image"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 position">
+        <h3 class="mbr-section-subtitle mbr-semibold mbr-fonts-style display-4">Registration is Open</h3>
+        <h1 class="mbr-section-title mbr-bold mbr-fonts-style display-1">Welcome to the</h1>
+        <div class="typed-text display-1">
+          <span>
+            <span class="animated-element mbr-bold" data-word1="Super" data-word2="Unique" data-word3="Modern" data-word4="Word 4" data-word5="Word 5" data-word6="Word 6" data-word7="Word 7" data-word8="Word 8" data-word9="Word 9" data-word10="Word 10" data-word11="Word 11" data-word12="Word 12" data-speed="1">
+            </span>
+          </span>
+        </div>
+        <h1 class="mbr-section-title mbr-bold mbr-fonts-style display-1">Growth Conference</h1>
+        
+        
+      </div>
+      <div class="info__block col-lg-12 align-left position justify-content-sm-start">
+        
+        
+
+        
+      <div class="info__block-item">
+          <div class="divider"></div>
+          <h4 class="title__item mbr-bold mbr-fonts-style display-5">22</h4>
+          <p class="text__item mbr-bold mbr-fonts-style display-4">PM Managers</p>
+        </div><div class="info__block-item">
+          <div class="divider"></div>
+          <h4 class="title__item mbr-bold mbr-fonts-style display-5">10</h4>
+          <p class="text__item mbr-bold mbr-fonts-style display-4">Sales People</p>
+        </div><div class="info__block-item">
+          <div class="divider"></div>
+          <h4 class="title__item mbr-bold mbr-fonts-style display-5">&gt;1000</h4>
+          <p class="text__item mbr-bold mbr-fonts-style display-4">The Participants</p>
+        </div></div>
+    </div>
+  </div>
+</section>
+
+
+<script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/Typed/typed.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+  <script>
+// Mobirise initialization
+function initTyped(t, a) {
+  $(a).typed({
+    strings: t,
+    typeSpeed: 101 - parseInt($(a).attr("data-speed")),
+    backSpeed: 101 - parseInt($(a).attr("data-speed")),
+    loop: !0,
+    backDelay: 1e3,
+  });
+}
+function getDataWordsArr(t) {
+  for (var a = parseInt(t.attr("data-words")), d = [], r = 1; r <= a; r++) {
+    var e = "data-word" + r;
+    void 0 !== t.attr(e) && d.push(t.attr(e));
+  }
+  return d;
+}
+var isBuilder = $("html").hasClass("is-builder");
+isBuilder
+  ? $(document)
+      .on("add.cards", function (t) {
+        0 != $(t.target).find(".typed-text").length &&
+          $(t.target)
+            .find(".animated-element")
+            .each(function () {
+              parseInt($(this).attr("data-words"))
+                ? initTyped(getDataWordsArr($(this)), $(this))
+                : initTyped(
+                    [
+                      $(this).attr("data-word1"),
+                      $(this).attr("data-word2"),
+                      $(this).attr("data-word3"),
+                      $(this).attr("data-word4"),
+                      $(this).attr("data-word5"),
+                      $(this).attr("data-word6"),
+                      $(this).attr("data-word7"),
+                      $(this).attr("data-word8"),
+                      $(this).attr("data-word9"),
+                      $(this).attr("data-word10"),
+                      $(this).attr("data-word11"),
+                      $(this).attr("data-word12"),
+                    ],
+                    $(this)
+                  );
+            });
+      })
+      .on("changeParameter.cards", function (t, a, d) {
+        (0 != a.indexOf("animatedWord") &&
+          "typeSpeed" != a &&
+          "wordsCount" != a) ||
+          $(t.target)
+            .find(".animated-element")
+            .each(function () {
+              parseInt($(this).attr("data-words"))
+                ? initTyped(getDataWordsArr($(this)), $(this))
+                : initTyped(
+                    [
+                      $(this).attr("data-word1"),
+                      $(this).attr("data-word2"),
+                      $(this).attr("data-word3"),
+                      $(this).attr("data-word4"),
+                      $(this).attr("data-word5"),
+                      $(this).attr("data-word6"),
+                      $(this).attr("data-word7"),
+                      $(this).attr("data-word8"),
+                      $(this).attr("data-word9"),
+                      $(this).attr("data-word10"),
+                      $(this).attr("data-word11"),
+                      $(this).attr("data-word12"),
+                    ],
+                    $(this)
+                  );
+            });
+      })
+  : $(".typed-text .animated-element").each(function () {
+      parseInt($(this).attr("data-words"))
+        ? initTyped(getDataWordsArr($(this)), $(this))
+        : initTyped(
+            [
+              $(this).attr("data-word1"),
+              $(this).attr("data-word2"),
+              $(this).attr("data-word3"),
+              $(this).attr("data-word4"),
+              $(this).attr("data-word5"),
+              $(this).attr("data-word6"),
+              $(this).attr("data-word7"),
+              $(this).attr("data-word8"),
+              $(this).attr("data-word9"),
+              $(this).attr("data-word10"),
+              $(this).attr("data-word11"),
+              $(this).attr("data-word12"),
+    ],
+            $(this)
+          );
+    });
+</script>
+
+</body>
+</html>
